@@ -1,0 +1,357 @@
+
+/* Global Resets and Base Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light gray background */
+    color: #333; /* Dark gray for text */
+}
+
+header {
+    background-color: #003366; /* Deep blue for header */
+    color: #ffffff; /* White text for header */
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Circular logo */
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #ffcc00; /* Gold for hover/active link */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif; /* Serif for headings for a classic touch */
+    color: #003366; /* Deep blue for headings */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em; /* Larger for main titles */
+}
+
+.text-center {
+    text-align: center;
+}
+
+#cabezera2 { /* Sub-headline or important quote */
+    font-size: 1.5em;
+    color: #555; /* Slightly lighter than main text */
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+p {
+    font-style: normal; /* Remove default italic */
+    color: #444; /* Slightly lighter text for paragraphs */
+    margin-bottom: 1em;
+    line-height: 1.8;
+}
+
+.text-danger { /* Highlighted text */
+    color: #d9534f; /* Soft red for emphasis */
+    font-weight: bold;
+}
+
+.text-cr { /* Specific text style for Carlos Rivera name/brand */
+    color: #003366; /* Deep blue */
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+article {
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #ffffff; /* White background for content articles */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+ul li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #eee; /* Light border for list items */
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+.discos { /* Album list items */
+    font-weight: bold;
+    color: #004080; /* Slightly lighter blue */
+}
+
+.eventos { /* Section titles like "Eventos", "Galardones" */
+    font-size: 2em;
+    color: #003366;
+    border-bottom: 2px solid #ffcc00; /* Gold accent line */
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+}
+
+.tema { /* Song titles or specific themes */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0059b3; /* Medium blue */
+}
+
+.buttons { /* Social media buttons container */
+    text-align: center; /* Center align buttons */
+    padding: 2em 0;
+}
+
+.buttons a {
+    text-decoration: none;
+    font-size: 24px; /* Larger icons */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #003366; /* Deep blue background */
+    color: #ffffff; /* White icon color */
+    border-radius: 50%;
+    margin: 0 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: #0059b3; /* Lighter blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+pre { /* Footer text */
+    font-size: 0.9em;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    color: #777; /* Gray for footer text */
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #e9ecef; /* Light gray background for footer area */
+}
+
+.album { /* Album cover images */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imagen { /* General images */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.palenques, .event { /* Event details */
+    color: #333;
+    font-weight: normal;
+    font-size: 1em;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.event {
+    font-weight: bold;
+    color: #003366;
+}
+
+/* Galeria (Gallery) Styles */
+.linea { /* Decorative line */
+    background: #ffcc00; /* Gold line */
+    height: 3px;
+    width: 100%;
+    display: block;
+    margin-bottom: 2em;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    width: 90%;
+    margin: 2em auto;
+    grid-gap: 20px;
+    padding: 20px 0;
+}
+
+.galeria > a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria > a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.galeria img {
+    width: 100%;
+    vertical-align: top;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.galeria a:hover img {
+    filter: brightness(0.8); /* Slightly darken image on hover */
+    transform: scale(1.1); /* Zoom effect */
+}
+
+/* Lightbox Styles - More professional look */
+.ligth-box { /* Renamed for consistency, assuming 'light-box' was intended */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); /* Darker overlay */
+    width: 100%;
+    height: 100vh;
+    z-index: 1000; /* Ensure it's on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Start hidden */
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.ligth-box:target {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.ligth-box img {
+    width: auto; /* Adjust width automatically */
+    max-width: 80vw; /* Max width */
+    max-height: 80vh; /* Max height */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #003366; /* Consistent with header */
+    color: #ffffff;
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.close:hover {
+    background-color: #0059b3; /* Lighter blue on hover */
+}
+
+/* Container for overall page content to manage width */
+.container {
+    width: 80%;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+/* Specific styles for contacto.html background */
+.contacto-body {
+    background-image: url('img/fondo1.jpg'); /* Path relative to styles.css */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative; /* Needed for the ::before pseudo-element */
+    z-index: 1;
+}
+
+.contacto-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 51, 102, 0.7), rgba(0, 89, 179, 0.7)); /* Blue gradient overlay */
+    opacity: 0.85; /* Adjust opacity as needed */
+    z-index: -1; /* Place it behind the content */
+}
+
+/* Make text on contacto.html more readable */
+.contacto-body h1, .contacto-body p, .contacto-body a {
+    color: #ffffff !important; /* White text for better contrast on dark background */
+}
+
+.contacto-body .tema, .contacto-body .eventos {
+     color: #ffcc00 !important; /* Gold for titles for emphasis */
+}
+
+.contacto-body a:hover {
+    color: #dddddd !important; /* Lighter gray for hover */
+}
+
+/* Footer specific styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Dark background for footer */
+    color: #ccc; /* Light gray text */
+    font-size: 0.9em;
+    margin-top: 30px; /* Space above the footer */
+}
+
+footer pre {
+    color: #ccc;
+    background-color: transparent; /* Remove pre's default background if any */
+    margin: 0;
+    padding: 0;
+}
+
